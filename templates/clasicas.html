@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transposing</title>
+
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+
+</head>
+
+
+
+<body class="d-flex h-100 text-center text-bg-dark">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">Notas</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link fw-bold py-1 px-0" href="{{ url_for('home') }}">Cifrado americano C</a>
+                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Notas clásicas Do</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="px-3" style="margin: 25% auto;">
+            <h1>Transportar notas</h1>
+            <form method="post" action="/convertir1">
+                <h5>Tonos</h5>
+                <select name="tono_original" id="original" class="btn btn-secondary btn-sm dropdown-toggle">
+                    {% if original== "Do" %}
+                    <option selected value="Do">Do</option>
+                    {% else %}
+                    <option value="Do">Do</option>
+                    {% endif %}
+
+                    {% if original== "Do#" %}
+                    <option selected value="Do#">C#/Reb</option>
+                    {% else %}
+                    <option value="Do#">Do#/Reb</option>
+                    {% endif %}
+
+                    {% if original== "Re" %}
+                    <option selected value="Re">Re</option>
+                    {% else %}
+                    <option value="Re">Re</option>
+                    {% endif %}
+
+                    {% if original== "Re#" %}
+                    <option selected value="Re#">Re#/Mib</option>
+                    {% else %}
+                    <option value="Re#">Re#/Mib</option>
+                    {% endif %}
+
+                    {% if original== "Mi" %}
+                    <option selected value="Mi">Mi</option>
+                    {% else %}
+                    <option value="Mi">Mi</option>
+                    {% endif %}
+
+                    {% if original== "Fa" %}
+                    <option selected value="Fa">Fa</option>
+                    {% else %}
+                    <option value="Fa">Fa</option>
+                    {% endif %}
+
+                    {% if original== "Fa#" %}
+                    <option selected value="Fa#">Fa#/Solb</option>
+                    {% else %}
+                    <option value="Fa#">Fa#/Solb</option>
+                    {% endif %}
+
+                    {% if original== "Sol" %}
+                    <option selected value="Sol">Sol</option>
+                    {% else %}
+                    <option value="Sol">Sol</option>
+                    {% endif %}
+
+                    {% if original== "Sol#" %}
+                    <option selected value="Sol#">Sol#/Lab</option>
+                    {% else %}
+                    <option value="Sol#">Sol#/Lab</option>
+                    {% endif %}
+
+                    {% if original== "La" %}
+                    <option selected value="La">La</option>
+                    {% else %}
+                    <option value="La">La</option>
+                    {% endif %}
+
+                    {% if original== "La#" %}
+                    <option selected value="La#">La#/Sib</option>
+                    {% else %}
+                    <option value="La#">La#/Sib</option>
+                    {% endif %}
+
+                    {% if original== "Si" %}
+                    <option selected value="Si">Si</option>
+                    {% else %}
+                    <option value="Si">Si</option>
+                    {% endif %}
+                </select>
+
+                <label for="destino"> ---> </label>
+                <select name="tono_nuevo" id="destino" class="btn btn-secondary btn-sm dropdown-toggle">
+                    {% if nuevo== "Do" %}
+                    <option selected value="Do">Do</option>
+                    {% else %}
+                    <option value="Do">Do</option>
+                    {% endif %}
+
+                    {% if nuevo== "Do#" %}
+                    <option selected value="Do#">C#/Reb</option>
+                    {% else %}
+                    <option value="Do#">Do#/Reb</option>
+                    {% endif %}
+
+                    {% if nuevo== "Re" %}
+                    <option selected value="Re">Re</option>
+                    {% else %}
+                    <option value="Re">Re</option>
+                    {% endif %}
+
+                    {% if nuevo== "Re#" %}
+                    <option selected value="Re#">Re#/Mib</option>
+                    {% else %}
+                    <option value="Re#">Re#/Mib</option>
+                    {% endif %}
+
+                    {% if nuevo== "Mi" %}
+                    <option selected value="Mi">Mi</option>
+                    {% else %}
+                    <option value="Mi">Mi</option>
+                    {% endif %}
+
+                    {% if nuevo== "Fa" %}
+                    <option selected value="Fa">Fa</option>
+                    {% else %}
+                    <option value="Fa">Fa</option>
+                    {% endif %}
+
+                    {% if nuevo== "Fa#" %}
+                    <option selected value="Fa#">Fa#/Solb</option>
+                    {% else %}
+                    <option value="Fa#">Fa#/Solb</option>
+                    {% endif %}
+
+                    {% if nuevo== "Sol" %}
+                    <option selected value="Sol">Sol</option>
+                    {% else %}
+                    <option value="Sol">Sol</option>
+                    {% endif %}
+
+                    {% if nuevo== "Sol#" %}
+                    <option selected value="Sol#">Sol#/Lab</option>
+                    {% else %}
+                    <option value="Sol#">Sol#/Lab</option>
+                    {% endif %}
+
+                    {% if nuevo== "La" %}
+                    <option selected value="La">La</option>
+                    {% else %}
+                    <option value="La">La</option>
+                    {% endif %}
+
+                    {% if nuevo== "La#" %}
+                    <option selected value="La#">La#/Sib</option>
+                    {% else %}
+                    <option value="La#">La#/Sib</option>
+                    {% endif %}
+
+                    {% if nuevo== "Si" %}
+                    <option selected value="Si">Si</option>
+                    {% else %}
+                    <option value="Si">Si</option>
+                    {% endif %}
+                </select>
+                <hr>
+                <h5>Notas</h5>
+                <p>Ingrese las notas separadas por espacios</p>
+                <div class="input-group mb-3">
+                    <style>
+                        ::placeholder {
+                            font-weight: bold;
+                            color: black;
+                        }
+                    </style>
+                    <input type="text" name="notain" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" required placeholder="{{ notas }}">
+                </div>
+                <button type="submit" class="btn btn-secondary btn-lg">Transportar</button>
+            </form>
+            <hr>
+            <h5>Resultado</h5>
+            <div class="input-group mb-3">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                    readonly>{{ result }} </textarea>
+            </div>
+
+
+
+        </main>
+
+        <footer class="mt-auto text-white-50">
+            <p>Juan Sebastián Vélez</p>
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>
