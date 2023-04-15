@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 
-  
+
 </head>
 
 
@@ -31,176 +31,183 @@
       </div>
     </header>
 
-    <main class="px-3" style="margin: 25% auto;">
-      <h1>Transportar notas</h1>
-      <form method="post" action="/convertir">
-        <h5>Tonos</h5>
-        <select name="tono_original" id="original" class="btn btn-secondary btn-sm dropdown-toggle"> 
-          {% if original== "C" %} 
-            <option selected value="C">C</option> 
-          {% else %}
-            <option value="C">C</option> 
-          {% endif %}
+    <main class="px-3" style="margin: 5vh;">
+      <div class="principal">
+        <h1>Transportar notas</h1>
+        <form method="post" action="/convertir">
+          <h5>Tonos</h5>
+          <select name="tono_original" id="original" class="btn btn-secondary btn-sm dropdown-toggle">
+            {% if original== "C" %}
+            <option selected value="C">C</option>
+            {% else %}
+            <option value="C">C</option>
+            {% endif %}
 
-          {% if original== "C#" %} 
-            <option selected value="C#">C#/Db</option> 
-          {% else %}
-            <option value="C#">C#/Db</option> 
-          {% endif %}
+            {% if original== "C#" %}
+            <option selected value="C#">C#/Db</option>
+            {% else %}
+            <option value="C#">C#/Db</option>
+            {% endif %}
 
-          {% if original== "D" %} 
-            <option selected value="D">D</option> 
-          {% else %}
-            <option value="D">D</option> 
-          {% endif %}
+            {% if original== "D" %}
+            <option selected value="D">D</option>
+            {% else %}
+            <option value="D">D</option>
+            {% endif %}
 
-          {% if original== "D#" %} 
-            <option selected value="D#">D#/Eb</option> 
-          {% else %}
-            <option value="D#">D#/Eb</option> 
-          {% endif %}
+            {% if original== "D#" %}
+            <option selected value="D#">D#/Eb</option>
+            {% else %}
+            <option value="D#">D#/Eb</option>
+            {% endif %}
 
-          {% if original== "E" %} 
-            <option selected value="E">E</option> 
-          {% else %}
-            <option value="E">E</option> 
-          {% endif %}
+            {% if original== "E" %}
+            <option selected value="E">E</option>
+            {% else %}
+            <option value="E">E</option>
+            {% endif %}
 
-          {% if original== "F" %} 
-            <option selected value="F">F</option> 
-          {% else %}
-            <option value="F">F</option> 
-          {% endif %}
+            {% if original== "F" %}
+            <option selected value="F">F</option>
+            {% else %}
+            <option value="F">F</option>
+            {% endif %}
 
-          {% if original== "F#" %} 
-            <option selected value="F#">F#/Gb</option> 
-          {% else %}
-            <option value="F#">F#/Gb</option> 
-          {% endif %}
+            {% if original== "F#" %}
+            <option selected value="F#">F#/Gb</option>
+            {% else %}
+            <option value="F#">F#/Gb</option>
+            {% endif %}
 
-          {% if original== "G" %} 
-            <option selected value="G">G</option> 
-          {% else %}
-            <option value="G">G</option> 
-          {% endif %}
+            {% if original== "G" %}
+            <option selected value="G">G</option>
+            {% else %}
+            <option value="G">G</option>
+            {% endif %}
 
-          {% if original== "G#" %} 
-            <option selected value="G#">G#/Ab</option> 
-          {% else %}
-            <option value="G#">G#/Ab</option> 
-          {% endif %}
+            {% if original== "G#" %}
+            <option selected value="G#">G#/Ab</option>
+            {% else %}
+            <option value="G#">G#/Ab</option>
+            {% endif %}
 
-          {% if original== "A" %} 
-            <option selected value="A">A</option> 
-          {% else %}
-            <option value="A">A</option> 
-          {% endif %}
+            {% if original== "A" %}
+            <option selected value="A">A</option>
+            {% else %}
+            <option value="A">A</option>
+            {% endif %}
 
-          {% if original== "A#" %} 
-            <option selected value="A#">A#/Bb</option> 
-          {% else %}
-            <option value="A#">A#/Bb</option> 
-          {% endif %}
+            {% if original== "A#" %}
+            <option selected value="A#">A#/Bb</option>
+            {% else %}
+            <option value="A#">A#/Bb</option>
+            {% endif %}
 
-          {% if original== "B" %} 
-            <option selected value="B">B</option> 
-          {% else %}
-            <option value="B">B</option> 
-          {% endif %}
+            {% if original== "B" %}
+            <option selected value="B">B</option>
+            {% else %}
+            <option value="B">B</option>
+            {% endif %}
 
-        
-        </select>
 
-        <label for="destino">  --->  </label>
-        <select name="tono_nuevo" id="destino" class="btn btn-secondary btn-sm dropdown-toggle"> 
-          {% if nuevo== "C" %} 
-            <option selected value="C">C</option> 
-          {% else %}
-            <option value="C">C</option> 
-          {% endif %}
+          </select>
 
-          {% if nuevo== "C#" %} 
-            <option selected value="C#">C#/Db</option> 
-          {% else %}
-            <option value="C#">C#/Db</option> 
-          {% endif %}
+          <label for="destino"> ---> </label>
+          <select name="tono_nuevo" id="destino" class="btn btn-secondary btn-sm dropdown-toggle">
+            {% if nuevo== "C" %}
+            <option selected value="C">C</option>
+            {% else %}
+            <option value="C">C</option>
+            {% endif %}
 
-          {% if nuevo== "D" %} 
-            <option selected value="D">D</option> 
-          {% else %}
-            <option value="D">D</option> 
-          {% endif %}
+            {% if nuevo== "C#" %}
+            <option selected value="C#">C#/Db</option>
+            {% else %}
+            <option value="C#">C#/Db</option>
+            {% endif %}
 
-          {% if nuevo== "D#" %} 
-            <option selected value="D#">D#/Eb</option> 
-          {% else %}
-            <option value="D#">D#/Eb</option> 
-          {% endif %}
+            {% if nuevo== "D" %}
+            <option selected value="D">D</option>
+            {% else %}
+            <option value="D">D</option>
+            {% endif %}
 
-          {% if nuevo== "E" %} 
-            <option selected value="E">E</option> 
-          {% else %}
-            <option value="E">E</option> 
-          {% endif %}
+            {% if nuevo== "D#" %}
+            <option selected value="D#">D#/Eb</option>
+            {% else %}
+            <option value="D#">D#/Eb</option>
+            {% endif %}
 
-          {% if nuevo== "F" %} 
-            <option selected value="F">F</option> 
-          {% else %}
-            <option value="F">F</option> 
-          {% endif %}
+            {% if nuevo== "E" %}
+            <option selected value="E">E</option>
+            {% else %}
+            <option value="E">E</option>
+            {% endif %}
 
-          {% if nuevo== "F#" %} 
-            <option selected value="F#">F#/Gb</option> 
-          {% else %}
-            <option value="F#">F#/Gb</option> 
-          {% endif %}
+            {% if nuevo== "F" %}
+            <option selected value="F">F</option>
+            {% else %}
+            <option value="F">F</option>
+            {% endif %}
 
-          {% if nuevo== "G" %} 
-            <option selected value="G">G</option> 
-          {% else %}
-            <option value="G">G</option> 
-          {% endif %}
+            {% if nuevo== "F#" %}
+            <option selected value="F#">F#/Gb</option>
+            {% else %}
+            <option value="F#">F#/Gb</option>
+            {% endif %}
 
-          {% if nuevo== "G#" %} 
-            <option selected value="G#">G#/Ab</option> 
-          {% else %}
-            <option value="G#">G#/Ab</option> 
-          {% endif %}
+            {% if nuevo== "G" %}
+            <option selected value="G">G</option>
+            {% else %}
+            <option value="G">G</option>
+            {% endif %}
 
-          {% if nuevo== "A" %} 
-            <option selected value="A">A</option> 
-          {% else %}
-            <option value="A">A</option> 
-          {% endif %}
+            {% if nuevo== "G#" %}
+            <option selected value="G#">G#/Ab</option>
+            {% else %}
+            <option value="G#">G#/Ab</option>
+            {% endif %}
 
-          {% if nuevo== "A#" %} 
-            <option selected value="A#">A#/Bb</option> 
-          {% else %}
-            <option value="A#">A#/Bb</option> 
-          {% endif %}
+            {% if nuevo== "A" %}
+            <option selected value="A">A</option>
+            {% else %}
+            <option value="A">A</option>
+            {% endif %}
 
-          {% if nuevo== "B" %} 
-            <option selected value="B">B</option> 
-          {% else %}
-            <option value="B">B</option> 
-          {% endif %}
-        </select>
-        <hr>
-        <h5>Notas</h5>
-        <p>Ingrese las notas separadas por espacios</p>
-        <div class="input-group mb-3">
-          <style>::placeholder {font-weight: bold; }</style>
-          <input type="text" name="notain" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required placeholder="{{ notas }}">
-        </div>
-        <button type="submit" class="btn btn-secondary btn-lg">Transportar</button>
-      </form>
+            {% if nuevo== "A#" %}
+            <option selected value="A#">A#/Bb</option>
+            {% else %}
+            <option value="A#">A#/Bb</option>
+            {% endif %}
+
+            {% if nuevo== "B" %}
+            <option selected value="B">B</option>
+            {% else %}
+            <option value="B">B</option>
+            {% endif %}
+          </select>
+          <hr>
+          <h5>Notas</h5>
+          <p>Ingrese las notas separadas por espacios</p>
+          <div class="input-group mb-3">
+            <style>
+              ::placeholder {
+                font-weight: bold;
+              }
+            </style>
+            <input type="text" name="notain" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" required placeholder="{{ notas }}">
+          </div>
+          <button type="submit" class="btn btn-secondary btn-lg">Transportar</button>
+        </form>
+      </div>
       <hr>
       <h5>Resultado</h5>
       <div class="input-group mb-3">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" readonly>{{ result }} </textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" readonly>{{ result }} </textarea>
       </div>
 
-     
+
 
     </main>
 

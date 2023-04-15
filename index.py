@@ -57,6 +57,10 @@ def conversion(tono_original, tono_nuevo, notain):
     lista1 = notain.split(' ')
     lista = convertir_bemol(lista1)
     listaout=[]
+    # recorrer la lista y si encuentra un - eliminarlo
+    for i in reversed(lista):
+        if i=='-':
+            lista.remove(i)
 
     #Elimina un espacio al final en caso de existir
     for i in reversed(lista):
